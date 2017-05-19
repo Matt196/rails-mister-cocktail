@@ -1,3 +1,6 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+
 // Graphical variables
 @import "config/variables";
 @import "config/bootstrap_variables";
@@ -14,6 +17,6 @@
 @import "components/index";
 @import "pages/index";
 
-body {
-  margin-top: $nav-height;
+h1, h2, h3, h4 {
+  font-family: 'Roboto', Open sans;
 }

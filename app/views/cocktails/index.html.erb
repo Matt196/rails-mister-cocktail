@@ -7,15 +7,28 @@
     </div>
   </div>
 </div>
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-      <h1>Nos cocktails</h1>
-      <ul>
+
+<div class="wrapper text-center">
+  <div class="container">
+    <h2>Nos cocktails</h2>
+    <div class="row">
+      <div class="cards">
         <% @cocktails.each do |cocktail| %>
-          <li><%= link_to cocktail.name, cocktail_path(cocktail)  %></li>
+          <div class="col-xs-12 col-sm-4">
+            <div class="card">
+              <%= link_to cocktail_path(cocktail) do %>
+                <div class="card-header" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= cl_image_path cocktail.photo.path, height: 300, width: 400, crop: :fill %>')">
+                </div>
+                <div class="card-body">
+                  <h3><%= cocktail.name %></h3>
+                </div>
+              <% end %>
+            </div>
+          </div>
         <% end %>
-      </ul>
+      </div>
     </div>
   </div>
 </div>
+
