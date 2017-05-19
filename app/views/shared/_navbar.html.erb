@@ -1,3 +1,13 @@
 <nav>
-
+  <div class="nav-container">
+    <div class="nav-side">
+      <%= link_to '/' do %>
+        <%= icon('home') %>
+      <% end %>
+    </div>
+    <%= icon('glass') %>
+    <div class="nav-side nav-right">
+      <%= link_to 'Add Cocktail', new_cocktail_path, class: "btn btn-default"  %>
+    </div>
+  </div>
 </nav>

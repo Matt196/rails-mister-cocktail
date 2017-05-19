@@ -1,4 +1,39 @@
 nav {
   height: $nav-height;
   background-color: $green;
+  position: fixed;
+  top: 0px;
+  z-index: 1;
+  width: 100%;
+
+  .nav-container {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding : 0 50px;
+  }
+
+  .nav-side {
+    flex: 1;
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    a:hover {
+      color: rgba(255, 255, 255, 0.9);
+    }
+  }
+
+  i.fa {
+    font-size: 30px;
+  }
+
+  .nav-right {
+    text-align: right;
+  }
 }
+
+
